@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.blog.cavalr.entity.Project" table="project">
+		<id name="projectName" type="string">
+			<column name="project_name"></column>
+			<generator class="assigned" />
+		</id>
+		
+		<property name="projectDescription" type="string">
+			<column name="project_description" not-null="false"></column>
+		</property>
+		
+		<property name="projectManager" type="string">
+			<column name="project_manager" not-null="false"></column>
+		</property>
+		
+		<property name="startDate" type="java.util.Date">
+			<column name="start_date" not-null="false"></column>
+		</property>
+		
+		<property name="endDate" type="java.util.Date">
+			<column name="end_date" not-null="false"></column>
+		</property>
+	</class>
+</hibernate-mapping>
